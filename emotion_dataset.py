@@ -158,7 +158,7 @@ class MEADDataset(Dataset):
         if self._hubert is None:
             from dataset import HuBERTExtractor
             self._hubert = HuBERTExtractor(
-                onnx_path=self.cfg["paths"]["hubert_model"], device=self.device
+                model_name=self.cfg["paths"]["hubert_model"], device=self.device
             )
         return self._hubert
 
